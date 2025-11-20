@@ -10,7 +10,7 @@
     <script>
         const getPizzas = async () => {
             try {
-                const res = await fetch("http://localhost:5000/api/pizzas")
+                const res = await fetch("https://tests-deploy-back.onrender.com/api/pizzas")
                 const data = await res.json()
                 console.log(data)
             } catch (error) {
