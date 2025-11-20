@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    pizzas en la consola
+    <script>
+        const getPizzas = async () => {
+            try {
+                const res = await fetch("http://localhost:5000/api/pizzas")
+                const data = await res.json()
+                console.log(data)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        getPizzas()
+
+    </script>
+</body>
+</html>
